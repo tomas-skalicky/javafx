@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: 'spring-boot'
+
+apply from: 'gradle/javafx-plugin.gradle'
+
+javafx {
+    mainClass = 'org.skalicky.example.javafx.helloworldwithspringboot.Launcher'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+}
+
+task wrapper(type: Wrapper) {
+
+    // The distribution will be unpacked to the $USER_HOME/.gradle/gradle/dists
+    archiveBase = Wrapper.PathBase.GRADLE_USER_HOME
+    archivePath = 'gradle/dists'
+    distributionUrl = 'https://services.gradle.org/distributions/gradle-3.1-all.zip'
+}
+

@@ -1,0 +1,1 @@
+Execute `gradle wrapper' followed by `./gradlew clean bootRun' to build and run the JavaFX Spring Boot app.

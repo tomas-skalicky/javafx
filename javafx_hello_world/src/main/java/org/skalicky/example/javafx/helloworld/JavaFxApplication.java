@@ -10,8 +10,10 @@ public class JavaFxApplication extends Application {
     }
 
     @Override
-    public void start(final Stage privateStage) throws Exception {
-        privateStage.setTitle("Title of the Window");
+    public void start(final Stage primaryStage) throws Exception {
+        primaryStage.setTitle("JavaFX Hello-World app - main window");
+        primaryStage.centerOnScreen();
+        primaryStage.show();
     }
 
 }
